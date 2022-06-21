@@ -1,9 +1,42 @@
-function computerPlay(){ // created function called computerPlay that will randomly return one of those three
-let game = ['Rock', 'Paper', 'Scissors']; // create an array with Rock Paper and Scissor
-let randomPicker = game[Math.floor(Math.random() * game.length)]; // generate a random number between 0 and the length of the array, with 0 decimals
-return randomPicker; // returns randomPicker to generate random word from array
+const choices = ["rock", "paper", "scissors"];
+
+function game(){
+    playRound();
 }
-console.log(computerPlay());
+    
+function playRound(){
+    const playerSelection = playerChoice();
+    const computerSelection = computerChoice();
+}    
+
+function playerChoice(){
+    let input = prompt("Choose either Rock, Paper or Scissors");
+    while (input == null){
+        input = prompt("Choose either Rock, Paper or Scissors");
+    }
+    input = input.toLowerCase();
+    let check = validateInput(input)
+      while (check == false){
+          input = prompt("Choose either Rock, Paper or Scissors, capitalization does not matter");
+      }
+      while (input == null){
+        input = prompt("Choose either Rock, Paper or Scissors");
+    }
+    input = input.toLowerCase();
+    check = validateInput(input)
+    // console.log(input);
+}
+
+function computerChoice(){
+    return choices[Math.floor(Math.random()*choices.length)]   // get random input for computer
+}
+
+function validateInput(choice){
+    return choices.includes(choice)
+}
+
+
+game();
 
 
 
