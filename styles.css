@@ -15,6 +15,19 @@ body {
     text-shadow: 0 0 4px black;
 }
 
+.ties{
+color:#ff7300;
+}
+
+.playerChoice,
+.computerChoice{
+color:#ff0000;
+}
+.playerScore, 
+.computerScore{
+  color:black;
+}
+
 .choices {
   display: flex;
   width: 80vw;
@@ -87,7 +100,7 @@ img {
 }
 
 .reset:active {
-    color: #000
+    color: #000;
 }
 
 .reset:active:after {
